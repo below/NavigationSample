@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YTH-CQ-dwg">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YTH-CQ-dwg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -63,13 +63,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Root" id="AQl-Bl-FLm"/>
-                    <connections>
-                        <segue destination="6EF-ri-q2c" kind="show" identifier="goDeeper" animates="NO" id="RXc-eq-Ryk"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekz-Ce-Qfp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="596" y="114"/>
+            <point key="canvasLocation" x="647" y="19"/>
         </scene>
         <!--Alert View Controller-->
         <scene sceneID="NzN-4c-Xol">
@@ -118,7 +115,7 @@
         <!--Deeper Controller-->
         <scene sceneID="x24-bz-Tg6">
             <objects>
-                <viewController title="Deeper Controller" id="6EF-ri-q2c" customClass="BaseViewController" customModule="NavigationSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="first_level" title="Deeper Controller" id="6EF-ri-q2c" customClass="BaseViewController" customModule="NavigationSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I7G-lB-Vwy"/>
                         <viewControllerLayoutGuide type="bottom" id="Xo3-yX-fHl"/>
@@ -151,9 +148,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Deeper" id="a65-jm-rIe"/>
-                    <connections>
-                        <segue destination="gmB-xK-ZaN" kind="show" identifier="goDeeper" animates="NO" id="gha-l9-UPh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZgY-d2-ZlH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,7 +156,7 @@
         <!--Deepest Controller-->
         <scene sceneID="FSY-iL-d6L">
             <objects>
-                <viewController title="Deepest Controller" id="gmB-xK-ZaN" customClass="FinalViewController" customModule="NavigationSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="second_level" title="Deepest Controller" id="gmB-xK-ZaN" customClass="FinalViewController" customModule="NavigationSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NkO-So-CwH"/>
                         <viewControllerLayoutGuide type="bottom" id="nlG-SC-96f"/>
@@ -192,8 +186,4 @@
             <point key="canvasLocation" x="2194" y="112"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="RXc-eq-Ryk"/>
-        <segue reference="gha-l9-UPh"/>
-    </inferredMetricsTieBreakers>
 </document>
