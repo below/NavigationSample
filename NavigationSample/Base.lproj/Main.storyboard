@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YTH-CQ-dwg">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YTH-CQ-dwg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -128,7 +128,7 @@
                                 <rect key="frame" x="156" y="252" width="62" height="30"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
-                                    <segue destination="gmB-xK-ZaN" kind="show" identifier="continue" id="yqU-mj-sLz"/>
+                                    <segue destination="6YH-Aa-5C7" kind="show" identifier="continue" id="yqU-mj-sLz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgC-xk-NNR">
@@ -151,39 +151,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZgY-d2-ZlH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1386" y="112"/>
+            <point key="canvasLocation" x="1516" y="18"/>
         </scene>
-        <!--Deepest Controller-->
-        <scene sceneID="FSY-iL-d6L">
+        <!--second_level-->
+        <scene sceneID="Xwj-wa-zWS">
             <objects>
-                <viewController storyboardIdentifier="second_level" title="Deepest Controller" id="gmB-xK-ZaN" customClass="FinalViewController" customModule="NavigationSample" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NkO-So-CwH"/>
-                        <viewControllerLayoutGuide type="bottom" id="nlG-SC-96f"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MsL-wv-UDb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZiX-et-vk1">
-                                <rect key="frame" x="150" y="318.5" width="75" height="30"/>
-                                <state key="normal" title="Show Alert"/>
-                                <connections>
-                                    <action selector="showAlertWithSender:" destination="gmB-xK-ZaN" eventType="touchUpInside" id="gBB-cy-bdz"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ZiX-et-vk1" firstAttribute="centerX" secondItem="MsL-wv-UDb" secondAttribute="centerX" id="8CF-ll-mlN"/>
-                            <constraint firstItem="ZiX-et-vk1" firstAttribute="centerY" secondItem="MsL-wv-UDb" secondAttribute="centerY" id="jgd-DF-6k3"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Deepest" id="JQ1-KB-Ty2"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8wI-0X-hdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="second_level" storyboardName="Detail" referencedIdentifier="second_level" id="6YH-Aa-5C7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hlI-im-ILK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2194" y="112"/>
+            <point key="canvasLocation" x="2179" y="17"/>
         </scene>
     </scenes>
 </document>
