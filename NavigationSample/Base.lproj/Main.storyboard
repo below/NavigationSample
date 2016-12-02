@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YTH-CQ-dwg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="6q8-o8-eWi">
+            <objects>
+                <navigationController id="YTH-CQ-dwg" customClass="NavigationController" customModule="NavigationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="s2E-ea-mgA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0aF-TA-Bns" kind="relationship" relationship="rootViewController" id="pBX-Dq-qlD"/>
+                        <segue destination="dm9-fX-vll" kind="presentation" identifier="showAlarm" id="z1n-GG-ozJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HGy-5g-RH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-60" y="112"/>
+        </scene>
+        <!--Root Controller-->
+        <scene sceneID="UGE-Gb-ZlJ">
+            <objects>
+                <viewController title="Root Controller" id="0aF-TA-Bns" customClass="BaseViewController" customModule="NavigationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3g8-JB-MGz"/>
+                        <viewControllerLayoutGuide type="bottom" id="CsZ-Da-eV0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fzw-Ns-rGT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSh-fL-c1s">
+                                <rect key="frame" x="156" y="252" width="62" height="30"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="6EF-ri-q2c" kind="show" identifier="" id="c6d-LA-obj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbx-Kq-07H">
+                                <rect key="frame" x="150" y="385" width="75" height="30"/>
+                                <state key="normal" title="Show Alert"/>
+                                <connections>
+                                    <action selector="showAlertWithSender:" destination="0aF-TA-Bns" eventType="touchUpInside" id="zV3-G8-VYI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wbx-Kq-07H" firstAttribute="centerY" secondItem="fzw-Ns-rGT" secondAttribute="centerY" multiplier="1.2" id="7S4-Mk-lfR"/>
+                            <constraint firstItem="wbx-Kq-07H" firstAttribute="centerX" secondItem="fzw-Ns-rGT" secondAttribute="centerX" id="9AV-7t-kvd"/>
+                            <constraint firstItem="dSh-fL-c1s" firstAttribute="centerX" secondItem="fzw-Ns-rGT" secondAttribute="centerX" id="UOG-9f-N5k"/>
+                            <constraint firstItem="dSh-fL-c1s" firstAttribute="centerY" secondItem="fzw-Ns-rGT" secondAttribute="centerY" multiplier="0.8" id="nLk-k0-CsI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Root" id="AQl-Bl-FLm"/>
+                    <connections>
+                        <segue destination="6EF-ri-q2c" kind="show" identifier="goDeeper" animates="NO" id="RXc-eq-Ryk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ekz-Ce-Qfp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596" y="114"/>
+        </scene>
+        <!--Alert View Controller-->
+        <scene sceneID="NzN-4c-Xol">
+            <objects>
+                <viewController id="dm9-fX-vll" customClass="AlertViewController" customModule="NavigationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0ex-7g-3hd"/>
+                        <viewControllerLayoutGuide type="bottom" id="vOQ-P9-arA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p1Y-F0-N5k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L56-G0-wqU">
+                                <rect key="frame" x="145" y="252" width="85" height="30"/>
+                                <state key="normal" title="Just dismiss">
+                                    <color key="titleColor" red="1" green="0.99165303124707227" blue="0.97389131790188921" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="justDismiss:" destination="dm9-fX-vll" eventType="touchUpInside" id="G4G-mt-nvZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VzE-cs-AOe">
+                                <rect key="frame" x="147" y="385" width="81" height="30"/>
+                                <state key="normal" title="Go Deepest">
+                                    <color key="titleColor" red="1" green="0.99165303120000003" blue="0.97389131790000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goDeepest:" destination="dm9-fX-vll" eventType="touchUpInside" id="RQ4-qm-giu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0092708704513445594" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="L56-G0-wqU" firstAttribute="centerX" secondItem="p1Y-F0-N5k" secondAttribute="centerX" id="2jK-HV-08g"/>
+                            <constraint firstItem="L56-G0-wqU" firstAttribute="centerY" secondItem="p1Y-F0-N5k" secondAttribute="centerY" multiplier="0.8" id="2zd-wP-uNp"/>
+                            <constraint firstItem="VzE-cs-AOe" firstAttribute="centerY" secondItem="p1Y-F0-N5k" secondAttribute="centerY" multiplier="1.2" id="N6u-NP-wQD"/>
+                            <constraint firstItem="VzE-cs-AOe" firstAttribute="centerX" secondItem="p1Y-F0-N5k" secondAttribute="centerX" id="uqf-8z-eQ7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C0Z-rS-LhH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-60" y="913"/>
+        </scene>
+        <!--Deeper Controller-->
+        <scene sceneID="x24-bz-Tg6">
+            <objects>
+                <viewController title="Deeper Controller" id="6EF-ri-q2c" customClass="BaseViewController" customModule="NavigationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I7G-lB-Vwy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xo3-yX-fHl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fqf-ag-pzw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvP-mR-Hre">
+                                <rect key="frame" x="156" y="252" width="62" height="30"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="gmB-xK-ZaN" kind="show" identifier="continue" id="yqU-mj-sLz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgC-xk-NNR">
+                                <rect key="frame" x="150" y="385" width="75" height="30"/>
+                                <state key="normal" title="Show Alert"/>
+                                <connections>
+                                    <action selector="showAlertWithSender:" destination="6EF-ri-q2c" eventType="touchUpInside" id="oZE-20-Fuz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YvP-mR-Hre" firstAttribute="centerX" secondItem="fqf-ag-pzw" secondAttribute="centerX" id="ACp-zs-E8w"/>
+                            <constraint firstItem="YvP-mR-Hre" firstAttribute="centerY" secondItem="fqf-ag-pzw" secondAttribute="centerY" multiplier="0.8" id="YOf-26-lzI"/>
+                            <constraint firstItem="GgC-xk-NNR" firstAttribute="centerY" secondItem="fqf-ag-pzw" secondAttribute="centerY" multiplier="1.2" id="ueh-II-boi"/>
+                            <constraint firstItem="GgC-xk-NNR" firstAttribute="centerX" secondItem="fqf-ag-pzw" secondAttribute="centerX" id="z7h-7M-u4Z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Deeper" id="a65-jm-rIe"/>
+                    <connections>
+                        <segue destination="gmB-xK-ZaN" kind="show" identifier="goDeeper" animates="NO" id="gha-l9-UPh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZgY-d2-ZlH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1386" y="112"/>
+        </scene>
+        <!--Deepest Controller-->
+        <scene sceneID="FSY-iL-d6L">
+            <objects>
+                <viewController title="Deepest Controller" id="gmB-xK-ZaN" customClass="FinalViewController" customModule="NavigationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NkO-So-CwH"/>
+                        <viewControllerLayoutGuide type="bottom" id="nlG-SC-96f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MsL-wv-UDb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZiX-et-vk1">
+                                <rect key="frame" x="150" y="318.5" width="75" height="30"/>
+                                <state key="normal" title="Show Alert"/>
+                                <connections>
+                                    <action selector="showAlertWithSender:" destination="gmB-xK-ZaN" eventType="touchUpInside" id="gBB-cy-bdz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZiX-et-vk1" firstAttribute="centerX" secondItem="MsL-wv-UDb" secondAttribute="centerX" id="8CF-ll-mlN"/>
+                            <constraint firstItem="ZiX-et-vk1" firstAttribute="centerY" secondItem="MsL-wv-UDb" secondAttribute="centerY" id="jgd-DF-6k3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Deepest" id="JQ1-KB-Ty2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8wI-0X-hdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2194" y="112"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="RXc-eq-Ryk"/>
+        <segue reference="gha-l9-UPh"/>
+    </inferredMetricsTieBreakers>
+</document>
