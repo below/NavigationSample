@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Zn-4r-bdw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Deeper Controller-->
+        <scene sceneID="aSz-Ac-V1d">
+            <objects>
+                <viewController storyboardIdentifier="first_level" title="Deeper Controller" id="5Zn-4r-bdw" customClass="BaseViewController" customModule="NavigationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FAf-dD-vgc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xap-pO-CLL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gym-Pm-sv0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="em3-E5-drT">
+                                <rect key="frame" x="156" y="252" width="62" height="30"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="Svt-Xw-OCT" kind="show" id="ovl-aJ-6AH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1C-KB-Ls8">
+                                <rect key="frame" x="150" y="385" width="75" height="30"/>
+                                <state key="normal" title="Show Alert"/>
+                                <connections>
+                                    <action selector="showAlertWithSender:" destination="5Zn-4r-bdw" eventType="touchUpInside" id="ktT-in-b5m"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="em3-E5-drT" firstAttribute="centerX" secondItem="gym-Pm-sv0" secondAttribute="centerX" id="0p5-JC-jV8"/>
+                            <constraint firstItem="B1C-KB-Ls8" firstAttribute="centerY" secondItem="gym-Pm-sv0" secondAttribute="centerY" multiplier="1.2" id="7B4-Py-Ewd"/>
+                            <constraint firstItem="B1C-KB-Ls8" firstAttribute="centerX" secondItem="gym-Pm-sv0" secondAttribute="centerX" id="jGp-jo-1zv"/>
+                            <constraint firstItem="em3-E5-drT" firstAttribute="centerY" secondItem="gym-Pm-sv0" secondAttribute="centerY" multiplier="0.8" id="mKS-eq-xFR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Deeper" id="SIv-XO-mp0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MXI-qd-MwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516" y="18"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="SAn-Um-HUu">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="second_level" storyboardName="Detail" id="Svt-Xw-OCT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fqw-7i-sfq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2047" y="43"/>
+        </scene>
+    </scenes>
+</document>
